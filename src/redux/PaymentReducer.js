@@ -2,7 +2,7 @@ const initState = {
   list: [],
 
   refemp: {},
-  sampleList: [],
+  sampleList: ["Delhi", "Kolkata", "Chennai", "Mumbai"],
 };
 
 // ACTION TYPES
@@ -40,7 +40,7 @@ export function updatePaymentAction(payload) {
   // return { type: PAYMENT_UPDATE, payload: payload };
   return async (dispatch) => {
     // WE HV TO CALL THE SPRINT1 / SPRING BOOT
-    const url = `http://localhost:8080/api/payment/${payload.id}`;
+    const url = `http://localhost:8080/api/employee/${payload.id}`;
     const requestBody = { ...payload, age: 25 };
 
     await fetch(url, {

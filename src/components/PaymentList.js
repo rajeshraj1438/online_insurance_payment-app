@@ -30,12 +30,12 @@ export function PaymentList() {
   //   setTimeout(() => setSuccessOperation(false), 2000);
   // };
 
-  const updatePayment = (item, index) => {
+  const updatePayment = (item) => {
     // we are doing this so that we can access this objec in the form page
     dispatch(updateRefPayment(item));
 
     // form page
-    history.push("/payment-done");
+    history.push("/create-payment");
   };
 
   const getPaymentById = (item) => {
@@ -50,7 +50,7 @@ export function PaymentList() {
           <h3 className="alert alert-primary">Payment List</h3>
 
           {successOperation && (
-            <div className="alert alert-primary">Payment Successful</div>
+            <div className="alert alert-primary">Operation Success</div>
           )}
 
           {/* <table className="table"> */}
@@ -74,7 +74,7 @@ export function PaymentList() {
                     <input
                       type="button"
                       onClick={() => getPaymentById(item)}
-                      value="Details"
+                      value="Detail"
                       className="btn btn-link"
                     />
                     /
