@@ -26,11 +26,11 @@ export function PaymentUpsert() {
     console.log(amount, date);
 
     // Validations
-    const re = /^[0-9]+$/;
-    if (!re.test(amount)) {
-      alert("Invalid Amount");
-      return;
-    }
+    // const re = /^[0-9]+$/;
+    // if (!re.test(amount)) {
+    //   alert("Invalid Amount");
+    //   return;
+    // }
 
     // THIS IS REDUX ACTION CALLING
     dispatch(
