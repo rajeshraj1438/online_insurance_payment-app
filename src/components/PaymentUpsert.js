@@ -25,6 +25,7 @@ export function PaymentUpsert() {
     e.preventDefault();
     console.log(amount, date);
 
+    // Validations
     const re = /^[0-9]+$/;
     if (!re.test(amount)) {
       alert("Invalid Amount");
